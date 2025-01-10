@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    header {
+        display: flex; /* Use flexbox */
+        align-items: center; /* Align items vertically in the header */
+        justify-content: space-between; /* Distribute items along the main axis with space between */
+        background-color:#141414;
+        color: ghostwhite;
+        padding: 20px; /* Padding around the content inside the header */
+        margin-bottom: 20px;
+    }
+    
+    
+    .logo img {
+        max-width: 200px; /* Set a maximum width for the logo */
+        height: auto; /* Maintain aspect ratio of the logo */
+    }
+    
+    nav {
+        float: right; /* Float the navigation to the right */
+        display: flex; /* Use flexbox for navigation */
+        align-items: center; /* Align items vertically in the navigation */
+    }
+    
+    nav ul {
+        list-style-type: none; /* Remove bullet points from the list */
+        margin: 0;
+        padding: 0;
+        display: flex; /* Use flexbox for menu items */
+        gap: 70px;
+        align-items: center;
+        font-size: large;
+    }
+    
+    nav ul li {
+        position: relative;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+        color: deeppink;
+    }
+    
+    nav ul ul {
+        display: none; /* Hide sub-menus by default */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 150px;
+    }
+    
+    /* Style the sub-menu items */
+    nav ul ul li {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+        color: blue;
+    }
+    
+    nav ul ul li a {
+        color: white; /* Text color of navigation links */
+        background-color: black;
+    }
+    
+    nav ul li:hover > ul {
+        display: block;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: red;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
+    .btn:hover {
+        background-color: darkred;
+    }
+    
+    .wrapper {
+        width: 100%; /* Make the wrapper span the full width */
+        padding: 20px; /* Add padding for spacing */
+    }
+    
+    .carousel-container {
+        width: 70%; /* Resize the carousel container to 50% of its parent's size */
+        margin: 0 auto; /* Center the carousel container horizontally */
+        overflow: hidden; /* Hide overflow to prevent horizontal scrollbar */
+        transition: margin-top 0.3s ease; /* Smooth transition for margin changes */
+    }
+    
+    .carousel {
+        display: flex;
+        transition: transform 1s ease; /* Transition for smooth sliding effect */
+        animation: slide 8s infinite; /* Set infinite animation */
+    }
+    
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        33.3% { transform: translateX(-100%); }
+        66.6% { transform: translateX(-200%); }
+        100% { transform: translateX(0); }
+    }
+    
+    
+    .carousel img {
+        flex: 0 0 auto; /* Disable flex-grow, flex-shrink, and flex-basis */
+        width: 100%; /* Make the images take up 100% of their parent (.carousel) */
+        height: 400px; /* Maintain aspect ratio */
+    }
+    
+    .content {
+        padding: 20px; /* Add padding for spacing */
+        text-align: center; /* Center align content */
+    }
+    
+    .content > * {
+        margin-bottom: 20px; /* Add space below each child element */
+    }
+    /* Add animation to smoothly slide images */
+    .carousel.slide {
+        animation: slide 8s infinite; /* Set infinite animation */
+    }
+    
+    .flex-container {
+        display: flex;
+        justify-content: space-between; /* Distribute items evenly */
+        gap: 20px; /* Add some space between sections */
+        margin-top: 20px;
+    }
+    
+    .about-mariana,
+    .collection-section,
+    .shop-by-category {
+        flex: 1; /* Each section occupies equal space */
+        background-color: #f9f98e; /* Example background color */
+        padding: 20px; /* Add padding for spacing */
+    }
+    
+    .collection-section img {
+        max-width: 100%; /* Set the maximum width of the images to 100% of their container */
+        height: 150px; /* Maintain the aspect ratio of the images */
+        margin-bottom: 10px; /* Add some spacing between images */
+    }
+    
+    .collection-section .btn {
+        display: block; /* Change display to block to use margin: 0 auto */
+        max-width: 100px; /* Set maximum width for the button */
+        margin: 0 auto; /* Center the button horizontally */
+        margin-top: 20px; /* Add some top margin for spacing */
+    }
+    
+    .collection {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 10px;
+    }
+    
+    .collection-item {
+        flex: 1;
+        padding: 10px;
+    }
+    
+    .about-mariana p {
+        margin-top: 10px;
+        line-height: 1.6; /* Adjust the value as needed */
+        font-size: large;
+    }
+    
+    .category-links {
+        display: flex; /* Display links as block elements */
+        flex-direction: column; /* Display links in a column */
+        gap: 20px;
+        margin-bottom: 10px; /* Add space between links */
+        margin-top: 10px;
+        font-size: large;
+    }
+    
+    /* Style the footer container as a flexbox */
+    footer {
+        display: flex;
+        justify-content: space-between; /* Distribute items evenly */
+        flex-wrap: wrap; /* Allow items to wrap into multiple rows */
+    }
+    
+    /* Style individual footer sections */
+    .footer-section {
+        flex: 1; /* Each section occupies equal space */
+        max-width: 48%; /* Set maximum width for each section to create two columns */
+        padding: 20px; /* Add padding for spacing */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+    
+    .footer-section p:nth-of-type(2) {
+        font-style: italic; /* Make the text italic */
+        color: #999; /* Change the text color */
+        margin-top: 20px;
+    }
+    
+    .footer-section img {
+        max-width: 100px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .close-btn {
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        z-index: 10000;
+    }
+
+    .nav-active ~ .close-btn {
+        display: block;
+    }
+    
+    /* Media query for smaller screens */
+    @media screen and (max-width: 768px) {
+        /* Hide or disable the second sub-menu */
+        nav ul ul {
+            display: none !important; /* Completely hide the sub-menu */
+        }
+
+        /* Show the hamburger menu */
+        .hamburger-menu {
+            display: block;
+            cursor: pointer; /* Change cursor to pointer for better indication of interactivity */
+            position: absolute; /* Allows precise placement */
+            top: 20px; /* Align it vertically with the close button */
+            right: 20px; /* Align it horizontally with the close button */
+            cursor: pointer; /* Show a pointer cursor */
+            z-index: 10000; /* Ensure it's above other content */
+        }
+
+        /* Adjust hamburger lines for better visibility and spacing */
+        .hamburger-menu .line {
+            width: 30px; /* Width of each line */
+            height: 3px; /* Height of each line */
+            background-color: white; /* Color of each line */
+            margin: 5px 0; /* Spacing between lines */
+            transition: transform 0.3s, opacity 0.3s; /* Smooth transition */
+        }
+
+        .hamburger-menu.active .line {
+            opacity: 0; /* Hide the lines when active */
+        }
+
+    
+        /* Hide the regular navigation links */
+        .nav-links {
+            display: none;
+        }
+    
+        /* When the navigation is active, show the links vertically */
+        .nav-links.nav-active {
+            display: block; /* Show the close button when the active class is added */
+            position: fixed; /* Fixed position to cover the whole screen */
+            top: 0;
+            left: 0;
+            background-color: #141414; /* Match the header background */
+            width: 100%;
+            height: 100vh; /* Full viewport height to ensure no cropping */
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 9999; /* Ensure the menu is above other content */
+            overflow-y: auto; /* Enable scrolling if menu content exceeds viewport height */
+        }     
+    
+        /* Style individual navigation links */
+        .nav-links.nav-active li {
+            margin-bottom: 10px;
+            text-align: center; /* Center align text for better appearance */
+        }
+
+        .nav-active .close-btn {
+            display: block; /* Visible when nav is active */
+        }
+
+        header .hamburger-menu.active ~ .close-btn {
+            display: block;
+        }
+            
+        .flex-container{
+            flex-direction: column; /* Change to column layout for smaller screens */
+        }
+        
+        /* CSS rules for smaller screens */
+        footer {
+            flex-direction: column;
+        }
+    
+        header {
+            height: 70px; /* Fixed height to prevent resizing */
+            overflow: hidden; /* Ensure no content overflows */
+            padding: 10px;
+        }
+
+        .logo img {
+            max-width: 120px; /* Smaller logo */
+            height: auto;     /* Maintain aspect ratio */
+        }
+
+        /* Prevent the main content from overflowing under the menu */
+        body.menu-open {
+            overflow: hidden; /* Disable scrolling on the body when the menu is open */
+        }
+             
+    }
+    
